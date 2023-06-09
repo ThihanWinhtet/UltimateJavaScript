@@ -11,5 +11,5 @@ function maxOf(int1 , int2){
     }
 }
 maxOf(5,4);
-console.log(maxNum);
+console.log(maxNum, "testing the branch");
 

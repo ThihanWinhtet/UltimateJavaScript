@@ -61,15 +61,32 @@
 
 // 6 Count Truthy
 // '' false NaN undefined null
-let arr = [1,2,3,'', undefined, null];
-console.log(countTruthy(arr));
-function countTruthy(array){
-    let count = 0;
-    for(let item of arr){
-        if(item){
-            count += 1;
+// let arr = [1,2,3,'', undefined, null];
+// console.log(countTruthy(arr));
+// function countTruthy(array){
+//     let count = 0;
+//     for(let item of arr){
+//         if(item){
+//             count += 1;
+//         }
+//     }
+//     return count;
+// }
+
+// 7 String Properties
+const people = {
+    name : 'Steve',
+    age : 24,
+    sex : 'male'
+}
+
+showProperties(people);
+function showProperties(obj){
+    for(let item in people){
+        let type = typeof(people[item])
+        if(type === 'string'){
+            console.log(item,  people[item]);
         }
     }
-    return count;
 }
 

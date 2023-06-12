@@ -12,14 +12,14 @@ function createCircle(radius){
 }
 
 let circle1 = createCircle(1);
-console.log(circle1);
+// console.log(circle1);
 
 // Constructor Function 
 
 function Circle(radius){
     this.radius = radius;
     this.draw = function(){
-        console.log("draw me");
+        // console.log("draw me");
     }
 }
 
@@ -35,11 +35,30 @@ let val1 = val;
 
 val.value = 20;
 
-console.log(val, val1);
+// console.log(val, val1);
 
 let num = 10;
 function added(num){
     val.value++;
 }
 added(val);
-console.log(val);
+// console.log(val);
+
+// Properties of an object
+let circley = {
+    radius : 1,
+    draw : function(){
+        console.log("draw the card");
+    }
+}
+
+for(let item in circley){
+    // console.log(item, circley[item]);
+}
+for(let item of Object.keys(circley)){
+    console.log(item, circley[item]);
+}
+for(let item of Object.entries(circley)){
+    console.log(item);
+}
+if('radius' in circley) console.log("hello");

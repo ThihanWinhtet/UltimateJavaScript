@@ -130,13 +130,30 @@
 // }
 
 // 10 Stars
-showStars(4);
-function showStars(input){
-    for(let i = 1 ; i <= input ; i++){
-        let str = '';
-        for(let j = 1 ; j <= i ; j++){
-            str += '*'
+// showStars(4);
+// function showStars(input){
+//     for(let i = 1 ; i <= input ; i++){
+//         let str = '';
+//         for(let j = 1 ; j <= i ; j++){
+//             str += '*'
+//         }
+//         console.log(str);
+//     }
+// }
+
+
+// 11 Prime Numbers
+showPrime(11);
+function showPrime(limit){
+    for(let i = 2; i <= limit; i++){
+        let isPrime = true;
+        for(let j = 2; j < i; j++){
+            if(i % j === 0){
+                isPrime = false;
+            }
         }
-        console.log(str);
+        if(isPrime){
+            console.log(i);
+        }
     }
 }

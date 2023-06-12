@@ -74,19 +74,33 @@
 // }
 
 // 7 String Properties
-const people = {
-    name : 'Steve',
-    age : 24,
-    sex : 'male'
-}
+// const people = {
+//     name : 'Steve',
+//     age : 24,
+//     sex : 'male'
+// }
 
-showProperties(people);
-function showProperties(obj){
-    for(let item in people){
-        let type = typeof(people[item])
-        if(type === 'string'){
-            console.log(item,  people[item]);
+// showProperties(people);
+// function showProperties(obj){
+//     for(let item in people){
+//         let type = typeof(people[item])
+//         if(type === 'string'){
+//             console.log(item,  people[item]);
+//         }
+//     }
+// }
+
+// 8 Sum of Multiples
+console.log(sum(11));;
+function sum(input){
+    let result = 0;
+
+    for(let i = 0 ; i <= input ; i++){
+        if(i % 3 == 0 || i % 5 == 0){
+            result += i;
         }
     }
+    
+    return result;
 }
 

@@ -91,16 +91,41 @@
 // }
 
 // 8 Sum of Multiples
-console.log(sum(11));;
-function sum(input){
-    let result = 0;
+// console.log(sum(11));;
+// function sum(input){
+//     let result = 0;
 
-    for(let i = 0 ; i <= input ; i++){
-        if(i % 3 == 0 || i % 5 == 0){
-            result += i;
-        }
+//     for(let i = 0 ; i <= input ; i++){
+//         if(i % 3 == 0 || i % 5 == 0){
+//             result += i;
+//         }
+//     }
+
+//     return result;
+// }
+
+
+// 9 Grade
+let marks = [80, 100, 100];
+console.log(calculateGrade(marks));;
+function calculateGrade(marks){
+    let sumMark = 0;
+    let averageMark = 0;
+
+    for(let mark of marks){
+        sumMark += mark;
     }
-    
-    return result;
-}
 
+    averageMark = sumMark / marks.length;
+    if(averageMark < 60)
+        return 'F';
+    if(averageMark < 70)
+        return 'D';
+    if(averageMark < 80)
+        return 'C';
+    if(averageMark < 90)
+        return 'B';
+
+    return 'A';
+
+}

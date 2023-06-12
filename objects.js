@@ -74,3 +74,14 @@ let another = {...circley}
 
 console.log(another);
 
+// Template literals
+let name = 'Steve';
+// const message = 'hello ' + name + " how are you ";
+const message = 
+`hello ${name},
+
+how are you are you good?
+
+Regards`;
+console.log(message);
+

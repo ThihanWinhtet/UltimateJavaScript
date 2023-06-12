@@ -106,26 +106,37 @@
 
 
 // 9 Grade
-let marks = [80, 100, 100];
-console.log(calculateGrade(marks));;
-function calculateGrade(marks){
-    let sumMark = 0;
-    let averageMark = 0;
+// let marks = [80, 100, 100];
+// console.log(calculateGrade(marks));;
+// function calculateGrade(marks){
+//     let sumMark = 0;
+//     let averageMark = 0;
 
-    for(let mark of marks){
-        sumMark += mark;
+//     for(let mark of marks){
+//         sumMark += mark;
+//     }
+
+//     averageMark = sumMark / marks.length;
+//     if(averageMark < 60)
+//         return 'F';
+//     if(averageMark < 70)
+//         return 'D';
+//     if(averageMark < 80)
+//         return 'C';
+//     if(averageMark < 90)
+//         return 'B';
+
+//     return 'A';
+// }
+
+// 10 Stars
+showStars(4);
+function showStars(input){
+    for(let i = 1 ; i <= input ; i++){
+        let str = '';
+        for(let j = 1 ; j <= i ; j++){
+            str += '*'
+        }
+        console.log(str);
     }
-
-    averageMark = sumMark / marks.length;
-    if(averageMark < 60)
-        return 'F';
-    if(averageMark < 70)
-        return 'D';
-    if(averageMark < 80)
-        return 'C';
-    if(averageMark < 90)
-        return 'B';
-
-    return 'A';
-
 }

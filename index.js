@@ -52,10 +52,24 @@
 // }
 
 // 5 Even and Odd Numbers
-showNumbers(11);
-function showNumbers(limit){
-    for(let i = 0; i <= limit; i++){
-        console.log(i , (i % 2 == 0) ? 'EVEN' : 'ODD');
+// showNumbers(11);
+// function showNumbers(limit){
+//     for(let i = 0; i <= limit; i++){
+//         console.log(i , (i % 2 == 0) ? 'EVEN' : 'ODD');
+//     }
+// }
+
+// 6 Count Truthy
+// '' false NaN undefined null
+let arr = [1,2,3,'', undefined, null];
+console.log(countTruthy(arr));
+function countTruthy(array){
+    let count = 0;
+    for(let item of arr){
+        if(item){
+            count += 1;
+        }
     }
+    return count;
 }
 

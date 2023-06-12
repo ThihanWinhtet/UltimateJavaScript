@@ -62,3 +62,15 @@ for(let item of Object.entries(circley)){
     console.log(item);
 }
 if('radius' in circley) console.log("hello");
+
+// Cloning an object
+
+// let another = {};
+// for(let item in circley){
+//     another[item] = circley[item];
+// }
+// let another = Object.assign({}, circley);
+let another = {...circley}
+
+console.log(another);
+

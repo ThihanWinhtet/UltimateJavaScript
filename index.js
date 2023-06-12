@@ -34,7 +34,7 @@
 //     return input;    
 // }
 
-// 4 Demerit Points 
+// 4 Demerit Point 
 console.log(checkSpeed(100));
 function checkSpeed(speed){
     const speedLimitActive = 75;

@@ -74,3 +74,14 @@
 //         return item += test;
 //     }, 0);
 // }
+
+
+// no6 Get Max
+const number = [1,2,3,4,5];
+const max = getMax(number);
+console.log(max);
+function getMax(array){
+    return array.reduce((item , current)=>{
+        return (current > item) ? current : item;
+    }, 0);
+}

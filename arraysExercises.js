@@ -77,11 +77,32 @@
 
 
 // no6 Get Max
-const number = [1,2,3,4,5];
-const max = getMax(number);
-console.log(max);
-function getMax(array){
-    return array.reduce((item , current)=>{
-        return (current > item) ? current : item;
-    }, 0);
+// const number = [1,2,3,4,5];
+// const max = getMax(number);
+// console.log(max);
+// function getMax(array){
+//     return array.reduce((item , current)=>{
+//         return (current > item) ? current : item;
+//     }, 0);
+// }
+
+// no7 Movies
+const movie = [
+    {title : 'a', year : 2023 , rating : 4.5},
+    {title : 'b', year : 2023 , rating : 4.7},
+    {title : 'c', year : 2023 , rating : 3},
+    {title : 'd', year : 2022 , rating : 4.5},
+];
+filterMovie(movie);
+function filterMovie(movie){
+    let filtered = movie
+    .filter(item => {
+        return item.year >= 2023 && item.rating >= 4
+    })
+    .sort((a,b)=>{
+        if(a.title.toUpperCase > b.title.toUpperCase) return 1;
+        if(a.title.toUpperCase < b.title.toUpperCase) return -1;
+        return 0;
+    });
+    console.log(filtered);
 }

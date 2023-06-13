@@ -93,7 +93,7 @@ const movie = [
     {title : 'c', year : 2023 , rating : 3},
     {title : 'd', year : 2022 , rating : 4.5},
 ];
-filterMovie(movie);
+console.log(filterMovie(movie));
 function filterMovie(movie){
     let filtered = movie
     .filter(item => {
@@ -103,6 +103,8 @@ function filterMovie(movie){
         if(a.title.toUpperCase > b.title.toUpperCase) return 1;
         if(a.title.toUpperCase < b.title.toUpperCase) return -1;
         return 0;
-    });
-    console.log(filtered);
+    })
+    .reverse()
+    .map(item=> item.title);
+    return filtered;
 }

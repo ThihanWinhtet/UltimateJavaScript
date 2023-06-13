@@ -55,3 +55,22 @@
 //     return newarray;
 // }
 
+
+// no5 Count Occurrences
+// const number = [1,2,3,4,5,3,3];
+// const count = countOccurrences(number, 5);
+// console.log(count);
+// function countOccurrences(array, searchElement){
+//     // let count = 0;
+//     // for(let item of array){
+//     //     if(item === searchElement){
+//     //         count += 1;
+//     //     }
+//     // }
+//     // return count;
+
+//     return  array.reduce((item, current)=>{
+//         const test = (current === searchElement) ? 1 : 0;
+//         return item += test;
+//     }, 0);
+// }

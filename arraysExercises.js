@@ -27,13 +27,31 @@
 
 
 // no3 Except
+// const number = [1,2,3,4,5,6];
+// const output = except(number, [1,2,3]);
+// console.log(output);
+// function except(number , excluded){
+//     for(let num of excluded){   
+//         number = number.filter(item => item != num);
+//     }
+//     return number;
+// }
 
-const number = [1,2,3,4,5,6];
-const output = except(number, [1,2,3]);
-console.log(output);
-function except(number , excluded){
-    for(let num of excluded){   
-        number = number.filter(item => item != num);
-    }
-    return number;
-}
+
+// no4 Moving an Element
+// const number = [1,2,3,4,5];
+// const output = move(number, 0, 3);
+// console.log(output);
+// function move(array , index, offset){
+//     if(offset < 0){
+//         offset = index + offset;
+//         if(offset < 0){
+//             console.error("Invalid Offset")
+//             return;
+//         }
+//     }
+//     let newarray = array.filter(item => item != array[index]);
+//     newarray.splice(offset, 0, array[index]);
+//     return newarray;
+// }
+

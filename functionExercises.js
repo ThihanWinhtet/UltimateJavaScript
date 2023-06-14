@@ -9,6 +9,7 @@ function sum(...args){
     return sum;
 }
 
+
 // no2 Area of Circle
 const circle = {
     radius : 2,
@@ -17,3 +18,22 @@ const circle = {
     }
 }
 console.log(circle.area);
+
+
+// no3 Error Handling
+const number = [1,2,3,4,5,3,3];
+try{
+    const count = countOccurrences(null, 3);
+    console.log(count);
+}catch(e){
+    console.log(e);
+}
+function countOccurrences(array, searchElement){
+    if(!Array.isArray(array)){
+        throw new Error('Invalid Value');
+    }
+    return  array.reduce((item, current)=>{
+        const test = (current === searchElement) ? 1 : 0;
+        return item += test;
+    }, 0);
+}

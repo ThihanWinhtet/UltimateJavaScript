@@ -1,39 +1,32 @@
-// Objects Literals
-// {} refers to the Object literal syntax 
-// An object in JS is essentially a collection of key value pairs.
 
-const circle = {
-    radius : 1,
-    location : {
-        x : 1,
-        y : 2
-    },
-    draw(){
-        console.log('draw');
-    }
-};
-circle.draw();
+// Stop Watch
 
+function StopWatch(){
+    let start, end, active, duration = 0;
 
-// Factory Function
-// eg...
-function createCircle(radius){
-    return {
-        radius,
-        draw(){
-            console.log('draw factory');
+    this.start = function(){
+        if(active){
+            throw new Error('Invalid Starting');
         }
+        active = true;
+        start = new Date();
+        console.log(start);
+    },
+    this.stop = function(){
+        if(!active){
+            throw new Error('Invalid Ending');
+        }
+        end = new Date();
+        let timer = (end.getTime() - start.getTime()) / 1000;
+        start = timer;
+        duration += timer;
+        active = false;
+    },
+    this.reset = function(){
+        duration = 0;
+    }
+    this.duration = function(){
+        console.log(duration);
     }
 }
-createCircle(1).draw();
-
-
-// Constructor Function
-function Circle(radius){
-    this.radius = radius;
-    this.draw = function draw(){
-        console.log("constructor draw");
-    }
-}
-
-let circle1 = new Circle(1);
+const sw = new StopWatch();
